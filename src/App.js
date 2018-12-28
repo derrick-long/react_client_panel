@@ -8,8 +8,12 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <AppNavbar></AppNavbar>
-          <h1> Placeholder </h1> 
+          <AppNavbar/>
+          
+          <div className="container">
+            <h1> Placeholder </h1> 
+          </div>
+        
         </div>
       </Router>
     );
