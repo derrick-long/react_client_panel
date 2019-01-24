@@ -31,7 +31,7 @@ import PropTypes from 'prop-types';
             lastName: this.lastNameInput.current.value,
             email: this.emailInput.current.value,
             phone: this.phoneInput.current.value,
-            balance: this.balanceInput.current.value === '' ? 0: 
+            balance: this.balanceInput.current.value === '' ? 0:
             this.balanceInput.current.value
         }
 
