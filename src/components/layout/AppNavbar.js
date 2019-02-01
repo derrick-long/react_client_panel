@@ -21,6 +21,14 @@ import { firebaseConnect } from 'react-redux-firebase';
             return { isAuthenticated: false}
         }
     }
+
+onLogoutClick = (e) => {
+    e.preventDefault();
+
+    const { firebase } = this.props; 
+
+    firebase.logout();
+}
   
 render() {
     const { isAuthenticated } =  this.state;
