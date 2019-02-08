@@ -17,7 +17,7 @@ import { firebaseConnect } from 'react-redux-firebase';
 
         if(auth.uid) {
             return { isAuthenticated: true }
-        }else {
+        } else {
             return { isAuthenticated: false}
         }
     }
@@ -67,6 +67,11 @@ render() {
                             </a>
                         </li>
                         <li className="nav-item">
+                    <Link to="/settings" className="nav-link">
+                       Settings
+                    </Link>
+                </li>
+                        <li className="nav-item">
                             <a href="#!" className="nav-link" onClick={this.onLogoutClick}>
                                 Logout 
                             </a>
@@ -83,12 +88,14 @@ render() {
 
 AppNavbar.propTypes = {
     firebase: PropTypes.object.isRequired,
-    auth: PropTypes.object.isRequired
+    auth: PropTypes.object.isRequired,
+    settings: PropTypes.object.isRequired
 }
 
 export default compose(
     firebaseConnect(),
-    connect((state,props)=> ({
-        auth: state.firebase.auth
+    connect((state, props)=> ({
+        auth: state.firebase.auth,
+        settings: state.settings
     }))
 )(AppNavbar);
